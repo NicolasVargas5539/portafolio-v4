@@ -1,0 +1,10 @@
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    @for (tech of techs(); track tech.name) {
+      <div class="swiper-slide">
+        <img [src]="tech.img" [alt]="tech.name" />
+        <p class="font-bold mt-2"> {{tech.name}} </p>
+      </div>
+    }
+  </div>
+</div>
