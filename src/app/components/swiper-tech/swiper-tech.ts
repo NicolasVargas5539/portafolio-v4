@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
+import { Component, AfterViewInit, signal } from '@angular/core';
 import Swiper from 'swiper';
 import { Autoplay } from 'swiper/modules';
 
@@ -8,7 +8,7 @@ Swiper.use([Autoplay]);
   selector: 'app-swiper-tech',
   standalone: true,
   templateUrl: './swiper-tech.html',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [],
   styles: `
     .mySwiper {
       width: 100%;

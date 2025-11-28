@@ -1,66 +1,77 @@
-<nav class="w-full bg-amber-500">
-  <div class="w-9/10 m-auto">
-    <!-- !TODO:  MENU -->
-    <div class="flex justify-between items-center">
-      <span class="text-6xl py-5">NiQCode</span>
-      <div class="text-2xl text-gray-800 flex gap-3">
-        <a class="">Sobre mi</a>
-        <a class="">Proyectos</a>
-        <a class="">Certificados</a>
-        <a class="">Contacto</a>
-      </div>
-    </div>
-  </div>
+<nav class="w-full shadow-xl">
+  <app-navbar></app-navbar>
 </nav>
 
 <!-- BANNER -->
-<div class="w-9/10 2xl:py-40 bg-amber-100 m-auto">
-  <div class="flex justify-center items-center gap-20">
-    <div class="w4/10">
-      <h1 class="text-7xl font-semibold">Nicolas Vargas</h1>
-      <h2 class="text-4xl my-2">Desarrollador web</h2>
-      <a class="bg-purple-800 rounded-2xl btn mt-4 text-white">
-        descargar cv
-      </a>
-    </div>
-    <div class="w4/10">
-      <img src="./img/picture.jpg" class="rounded-full" alt="NiqCode">
+<div class="w-full bg-linear-to-b from-purple-50 to-purple-900 py-10 pb-20">
+
+  <div class="w-9/10 2xl:py-40 m-auto">
+    <div class="flex flex-col-reverse lg:flex-row justify-center items-center gap-20">
+      <div class="">
+        <h1 class="lg:text-7xl text-5xl font-semibold">Nicolas Vargas</h1>
+        <h2 class="lg:text-4xl text-3xl mb-2">Desarrollador web</h2>
+        <a class="bg-purple-900 pb-1 border-none hover:scale-105 transition-all rounded-2xl btn mt-4 text-white text-xl"
+          href="./pdf/NV_CV.pdf">
+          descargar cv
+        </a>
+      </div>
+      <div class="">
+        <img src="./img/picture-rem.png" class="" alt="NiqCode">
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Sobre mi -->
 
-<div class="w-6/10 m-auto text-center py-10">
-  <h2 class="text-4xl">Sobre mi</h2>
-  <p class="mt-5 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, sed alias non ea sapiente
-    culpa quos ex facere.
-    Nisi nulla, ipsam enim illo optio deleniti maiores nihil sequi delectus, laudantium rem? In aliquam quaerat aut
-    laudantium ipsa! Unde repellendus suscipit veniam officiis eligendi reprehenderit expedita? Ex aliquam, praesentium
-    molestias neque doloremque.</p>
-</div>
-
-<!-- Carucel de tecnologias -->
-<div class="my-5">
-
-  <app-swiper-tech></app-swiper-tech>
+<div class="w-full py-10 pb-20" id="about">
+  <div class="lg:w-6/10 w-9/10 m-auto text-center py-10">
+    <h2 class="text-5xl font-semibold text-purple-900">Sobre mi</h2>
+    <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, sed alias non ea sapiente
+      culpa quos ex facere.
+      Nisi nulla, ipsam enim illo optio deleniti maiores nihil sequi delectus, laudantium rem? In aliquam quaerat aut
+      laudantium ipsa! Unde repellendus suscipit veniam officiis eligendi reprehenderit expedita? Ex aliquam,
+      praesentium
+      molestias neque doloremque.</p>
+  </div>
+  <app-swiper-tech class="my-5"></app-swiper-tech>
 
 </div>
+<!-- Carucel of technologies -->
+
 
 <!-- Cards of proyects -->
-<div class="flex w-9/10 m-auto bg-amber-500">
-  <div class="grid">
-    <div class="card">
-      <img src="" alt="" class="card-img">
-      <div class="card-content">
-        <div class="card-content_title">
-          <h1>Lorem ipsum dolor, sit.</h1>
-        </div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora minus, aut expedita sapiente facilis
-          distinctio! Architecto reiciendis fugiat delectus debitis veritatis impedit nulla cupiditate! Error sapiente
-          et suscipit cum necessitatibus.</p>
-        
-      </div>
-    </div>
-  </div>
+<div class="w-full bg-gray-200 py-20" id="projects">
+
+  <h2 class="text-center text-5xl font-semibold pb-5 text-purple-900">Portafolio de proyectos</h2>
+
+  <app-projects-card></app-projects-card>
 </div>
+<!-- Experience -->
+<div class="w-full py-20" id="experience">
+  <div class="w-6/10 m-auto mb-20 text-center">
+    <h2 class="text-5xl font-semibold mb-5 text-purple-900">Experiencia</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt et veritatis doloribus quis corrupti saepe
+      molestias officiis, vitae illo adipisci? Tempora quia excepturi ad sapiente, harum error animi iure hic.</p>
+  </div>
+  <app-timeline></app-timeline>
+</div>
+<!-- popup certificatles  -->
+<div class="w-full bg-gray-200 py-20" id="certificates">
+  <h2 class="text-center text-5xl font-semibold pb-5 text-purple-900">Certificados</h2>
+  <app-card-popup></app-card-popup>
+</div>
+
+<!-- Footer -->
+
+<footer class="w-full flex justify-center items-center bg-purple-800">
+  <div class="flex flex-col justify-center items-center py-8">
+    <div class="redes">
+      <a class="text-white cursor-pointer mr-2" href="https://www.instagram.com/nikolas_vargas/" target="_blank"><i class="fa-brands fa-instagram hover:-translate-y-1 transition-all"></i></a>
+      <a class="text-white cursor-pointer" href="https://www.linkedin.com/in/nicolas-v1085/" target="_blank"><i class="fa-brands fa-linkedin-in hover:-translate-y-1 transition-all"></i></a>
+    </div>
+    <h1 class="text-sm text-white text-center text-bold">Realizado por Nicolas Vargas - 2025</h1>
+  </div>
+</footer>
+
+<app-to-up></app-to-up>

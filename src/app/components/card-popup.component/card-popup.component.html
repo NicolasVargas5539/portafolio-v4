@@ -1,0 +1,27 @@
+<div class="w-9/10 m-auto">
+  <div class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+
+      @for (cert of certificates(); track cert.id) {
+      <div class="swiper-slide">
+        <div class="certificate-card" (click)="openPopup(cert.image)">
+          <img [src]="cert.image" [alt]="cert.title" />
+          <div class="title text-purple-900">{{ cert.title }}</div>
+        </div>
+      </div>
+      }
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination2 swiper-pagination"></div>
+  </div>
+</div>
+
+<!-- Popup Modal -->
+@if (isPopupOpen()) {
+<div class="fixed inset-0 backdrop-blur-2xl bg-blend-color-dodge bg-opacity-75 flex items-center justify-center z-50" (click)="onBackdropClick()">
+  <div class="flex items-center justify-center h-screen" (click)="onImageClick($event)">
+    <img [src]="selectedImage()" [alt]="'Certificado ampliado'" class="h-[90vh] w-auto max-w-full object-contain" />
+  </div>
+</div>
+}
