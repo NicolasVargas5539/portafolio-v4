@@ -73,29 +73,29 @@ export class CardPopupComponent implements AfterViewInit {
   certificates = signal<Certificate[]>([
     {
       id: 1,
-      title: 'Certificado de Angular',
-      image: './img/certificates/Angular.jpg'
-    },
-    {
-      id: 2,
-      title: 'Certificado de CSS',
-      image: './img/certificates/CSS.jpg'
-    },
-    {
-      id: 3,
-      title: 'Certificado de GitHub',
-      image: './img/certificates/github.jpg'
-    },
-    {
-      id: 4,
       title: 'Diploma de Tecnico',
       image: './img/certificates/Tecnico.jpg'
     },
     {
-      id: 5,
+      id: 2,
       title: 'Diploma Ingles B2',
+      image: './img/certificates/Ingles.jpg'
+    },
+    {
+      id: 3,
+      title: 'Certificado de Angular',
+      image: './img/certificates/Angular.jpg'
+    },
+    {
+      id: 4,
+      title: 'Certificado de CSS',
       image: './img/certificates/CSS.jpg'
-    }
+    },
+    {
+      id: 5,
+      title: 'Certificado de GitHub',
+      image: './img/certificates/github.jpg'
+    },
   ]);
 
   isPopupOpen = signal(false);

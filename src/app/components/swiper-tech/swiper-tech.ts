@@ -13,7 +13,7 @@ Swiper.use([Autoplay]);
     .mySwiper {
       width: 100%;
       height: 100%;
-      padding: 20px 0;
+      padding: 20px 0 0 0;
     }
 
     .swiper-slide {
@@ -34,6 +34,11 @@ Swiper.use([Autoplay]);
       scale: 1.1;
       cursor: pointer;
     }
+    @media(max-width: 1024px){
+      .swiper-slide img {
+        max-height: 50px !important;
+      }
+    }
   `
 })
 export class SwiperTech implements AfterViewInit {
@@ -48,6 +53,7 @@ export class SwiperTech implements AfterViewInit {
     { name: 'Angular', img: './img/tech/Angular.png' },
     { name: 'SQL', img: './img/tech/sql.png' },
     { name: 'WordPress', img: './img/tech/wordpress.png' },
+    { name: 'GitHun', img: './img/tech/github.png' },
   ]);
 
   ngAfterViewInit() {
@@ -56,22 +62,18 @@ export class SwiperTech implements AfterViewInit {
       slidesPerView: 8,
       spaceBetween: 20,
 
-      speed: 8000, // entre 6k - 12k se ve mejor
+      speed: 2000,
       allowTouchMove: false,
 
       autoplay: {
-        delay: 0, // movimiento continuo
+        delay: 0,
         disableOnInteraction: false
       },
 
       breakpoints: {
         0: {        // móviles
-          slidesPerView: 2,
+          slidesPerView: 4,
           spaceBetween: 10
-        },
-        480: {      // móviles grandes
-          slidesPerView: 3,
-          spaceBetween: 15
         },
         768: {      // tablets
           slidesPerView: 4,

@@ -19,9 +19,13 @@
 
 <!-- Popup Modal -->
 @if (isPopupOpen()) {
-<div class="fixed inset-0 backdrop-blur-2xl bg-blend-color-dodge bg-opacity-75 flex items-center justify-center z-50" (click)="onBackdropClick()">
-  <div class="flex items-center justify-center h-screen" (click)="onImageClick($event)">
-    <img [src]="selectedImage()" [alt]="'Certificado ampliado'" class="h-[90vh] w-auto max-w-full object-contain" />
+<div
+  class="fixed inset-0 p-2 backdrop-blur-2xl bg-blend-color-dodge bg-opacity-75 flex items-center justify-center z-50"
+  (click)="onBackdropClick()">
+  <div class="flex items-center justify-center relative h-screen" (click)="onImageClick($event)">
+    <button class="absolute top-2/7 md:top-10 right-5 text-4xl z-10 text-purple-800 font-bold" (click)="closePopup()">X</button>
+    <img [src]="selectedImage()" [alt]="'Certificado ampliado'" class="sm:h-[90vh] w-auto max-w-full object-contain" />
   </div>
+
 </div>
 }
